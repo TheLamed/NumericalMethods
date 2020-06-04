@@ -44,21 +44,33 @@ namespace NumericalMethods
             //Console.WriteLine(Solution.Answer[0] + ", " + Solution.Answer[1] + ", " + Solution.Answer[2]);
 
             //LU
-            var LU = new LU();
+            //var LU = new LU();
 
-            double[,] Arr = 
+            //double[,] Arr = 
+            //{ 
+            //    {2, 5,  4},
+            //    {1, 3,  2},
+            //    {2, 10, 9}
+            //};
+
+            //double[,] C1;
+            //Arr = LU.LUFactorization(Arr, out C1);
+            //Show(Arr);
+            //Console.WriteLine();
+            //Show(C1);
+            //Console.ReadKey();
+
+            //Zeidel
+            var A = new double[][]
             { 
-                {2, 5,  4},
-                {1, 3,  2},
-                {2, 10, 9}
+                new double[]{ -5, -1, -4},
+                new double[]{ -4, 4, -5} 
             };
+            double epsilon = 0.0001;
 
-            double[,] C1;
-            Arr = LU.LUFactorization(Arr, out C1);
-            Show(Arr);
-            Console.WriteLine();
-            Show(C1);
-            Console.ReadKey();
+            var z = new Zeidel();
+            z.Zeid(A, epsilon);
+
         }
 
         private static void Show(double[,] matrix)
