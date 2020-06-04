@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="GaussMethod.cs" />
     <Compile Include="Kramer.cs" />
+    <Compile Include="LU.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
